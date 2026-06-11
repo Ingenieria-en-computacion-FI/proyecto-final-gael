@@ -1,64 +1,46 @@
 Bitácora de Uso de Inteligencia Artificial
 Introducción
 
-Durante el desarrollo del proyecto final de la asignatura de Estructuras de Datos y Algoritmos I, se utilizó un sistema de inteligencia artificial como herramienta de apoyo técnico y de consulta. Su aplicación se centró en dos áreas principales: el desarrollo de un simulador de sistema operativo implementado en lenguaje C mediante estructuras de datos, y la configuración y gestión del control de versiones utilizando Git y GitHub.
+Durante el desarrollo del proyecto final de la asignatura de Estructuras de Datos y Algoritmos I, se utilizó inteligencia artificial como herramienta de apoyo técnico para la resolución de problemas, depuración de código, comprensión de errores y gestión del control de versiones. Su uso fue constante a lo largo del desarrollo del simulador de sistema operativo y durante la configuración del repositorio en GitHub.
 
-El uso de la inteligencia artificial no se limitó a la obtención de respuestas teóricas, sino que se empleó como un asistente para la resolución de errores en tiempo real, la interpretación de mensajes de compilación, la corrección de problemas de configuración del entorno de desarrollo y la estructuración del flujo de trabajo del proyecto.
+Prompts utilizados
 
-Desarrollo del proyecto y apoyo en estructuras de datos
+Durante el desarrollo del proyecto, los prompts utilizados estuvieron enfocados en dos áreas principales: la construcción del sistema en C y la resolución de problemas relacionados con Git y GitHub.
 
-En la etapa inicial del proyecto se trabajó en la implementación de un simulador de sistema operativo basado en estructuras de datos. El sistema incluía módulos de administración de memoria, planificación de procesos y estructuras auxiliares como pilas (stack), colas (queue), colas circulares y listas enlazadas.
+En la parte del desarrollo del sistema, se realizaron consultas relacionadas con la estructura del proyecto, la organización de archivos en carpetas como src e include, errores de compilación con GCC en Windows y la implementación de estructuras de datos como pilas, colas y listas enlazadas. También se solicitaron explicaciones sobre algoritmos de asignación de memoria como First Fit, Best Fit y Worst Fit, así como apoyo en la integración de módulos del simulador y en la ejecución de scripts en Python para pruebas y benchmarks.
 
-Durante esta fase se presentó el primer problema relacionado con la compilación del proyecto en Windows utilizando GCC. El sistema arrojaba errores del tipo “no such file or directory” al intentar compilar archivos ubicados en directorios como src/memory/memory_manager.c. Este error se debía a una estructura de rutas incorrecta o a la ejecución del compilador desde un directorio distinto al raíz del proyecto.
+En la parte de control de versiones, los prompts estuvieron relacionados con la instalación de Git, errores al ejecutar comandos en PowerShell, configuración del PATH del sistema, inicialización de repositorios, sincronización con GitHub, errores de ramas (master y main), y conflictos al realizar push y pull entre repositorios locales y remotos.
 
-La inteligencia artificial intervino explicando la importancia de mantener una estructura de proyecto modular correctamente organizada, diferenciando carpetas de código fuente (src) y archivos de encabezado (include). Asimismo, se recomendó ejecutar el compilador desde el directorio raíz del proyecto y verificar las rutas relativas utilizadas en el comando de compilación.
+Respuestas generadas por la IA
 
-Posteriormente, se presentaron dificultades en la implementación de algoritmos de asignación de memoria como First Fit, Best Fit y Worst Fit, así como en la correcta integración de los módulos de simulación. La inteligencia artificial ayudó a comprender la lógica de estos algoritmos, su relación con bloques de memoria y la forma en que debían estructurarse dentro del sistema para evitar inconsistencias en la administración de memoria.
+La inteligencia artificial proporcionó explicaciones detalladas y soluciones paso a paso para cada problema presentado.
 
-También se trabajó en la incorporación de scripts en Python utilizados para la automatización de pruebas y la generación de métricas de rendimiento mediante benchmarks. En este punto, la inteligencia artificial apoyó en la interpretación del flujo de ejecución de procesos externos desde Python y su integración con el binario del simulador compilado en C.
+En el área de desarrollo del sistema, explicó cómo estructurar correctamente un proyecto modular en C, cómo organizar los archivos fuente y de encabezado, y cómo corregir errores de compilación derivados de rutas incorrectas. También ayudó a comprender la lógica de los algoritmos de asignación de memoria y su implementación dentro del simulador.
 
-Gestión del control de versiones con Git y GitHub
+En el área de Git y GitHub, la IA explicó cómo instalar Git correctamente en Windows, cómo configurar el PATH del sistema, cómo verificar la instalación mediante comandos como git --version, y cómo inicializar y conectar un repositorio local con GitHub. Además, proporcionó soluciones a errores comunes como la falta de configuración de usuario, el conflicto entre ramas master y main, el error “src refspec main does not match any” y los problemas de sincronización entre repositorios locales y remotos mediante git pull --rebase.
 
-Una parte crítica del proyecto fue la configuración del sistema de control de versiones mediante Git y su integración con GitHub. En esta etapa se presentaron múltiples errores técnicos que impidieron inicialmente el correcto flujo de trabajo.
+Errores encontrados
 
-El primer problema fue que el comando git no era reconocido en la terminal de Windows PowerShell. El sistema indicaba que Git no era un comando válido, lo que evidenciaba una instalación incompleta o una configuración incorrecta del PATH del sistema operativo.
+Durante el desarrollo del proyecto se presentaron diversos errores técnicos.
 
-La inteligencia artificial explicó que este problema se debía a que, aunque Git estaba instalado, el sistema operativo no tenía registrada su ruta de ejecución. Se recomendó reinstalar Git asegurándose de seleccionar la opción “Git from the command line and also from 3rd-party software”, o en su defecto, agregar manualmente las rutas C:\Program Files\Git\cmd y C:\Program Files\Git\bin al PATH del sistema.
+En el desarrollo del sistema en C, se encontraron errores de compilación debido a rutas incorrectas de archivos fuente, especialmente en módulos dentro del directorio src/memory. También se presentaron problemas en la organización del proyecto, lo que generó dificultades para compilar correctamente todos los módulos del simulador. Adicionalmente, hubo complicaciones en la integración de estructuras de datos y en la ejecución de scripts de prueba.
 
-Después de resolver este problema, se presentó un segundo error relacionado con la configuración de identidad de Git. Al intentar realizar el primer commit, el sistema devolvió un mensaje indicando que no era posible detectar el autor del commit. Este problema fue solucionado mediante la configuración global de usuario utilizando los comandos git config --global user.name y git config --global user.email.
-
-Una vez configurado el entorno, se procedió a inicializar el repositorio y conectar el proyecto con GitHub. Durante esta etapa surgió un error común en la gestión de ramas, ya que el repositorio local utilizaba la rama “master”, mientras que GitHub esperaba la rama “main”. Esto provocó errores al intentar realizar el primer push, específicamente el error “src refspec main does not match any”.
-
-La inteligencia artificial explicó que este problema se debía a la discrepancia entre nombres de ramas y recomendó renombrar la rama local utilizando git branch -M main, lo cual estandarizó la estructura del repositorio.
-
-Posteriormente se presentó un error de rechazo al realizar el push hacia GitHub, indicando que el repositorio remoto contenía cambios que no existían localmente. Este problema fue interpretado como un conflicto de historial entre el repositorio local y remoto. La solución consistió en realizar una sincronización previa mediante el comando git pull origin main --rebase, el cual permitió integrar los cambios remotos sin sobrescribir información existente.
-
-Finalmente, tras resolver los conflictos de sincronización, se logró ejecutar correctamente el comando git push, completando la carga del proyecto al repositorio remoto.
-
-Errores encontrados durante el desarrollo
-
-Durante el desarrollo del proyecto se identificaron dos categorías principales de errores. En el ámbito del desarrollo del sistema en C, los errores estuvieron relacionados principalmente con la estructura del proyecto, la ubicación de archivos fuente y de encabezado, y fallos en la compilación derivados de rutas incorrectas. Asimismo, se presentaron dificultades en la integración de módulos de memoria y planificación de procesos, lo cual requería un análisis más profundo del flujo interno del simulador.
-
-En el ámbito del control de versiones, los errores más relevantes incluyeron la falta de reconocimiento del comando Git en el sistema operativo, la ausencia de configuración del PATH, la falta de identidad del usuario en Git, la discrepancia entre ramas locales y remotas, y los conflictos de sincronización entre el repositorio local y GitHub.
+En el uso de Git, los errores más relevantes fueron que el comando git no era reconocido en PowerShell, lo que indicaba una instalación incompleta o falta de configuración del PATH. También se presentó un error al realizar commits debido a la falta de configuración de identidad del usuario. Posteriormente, surgieron conflictos relacionados con la rama principal del repositorio, ya que el proyecto local utilizaba master mientras que GitHub utilizaba main. Finalmente, se presentó un error de rechazo al realizar push debido a diferencias entre el historial local y remoto.
 
 Correcciones realizadas
 
-Las correcciones implementadas abarcaron tanto el entorno de desarrollo como la configuración del sistema de control de versiones. En el proyecto en C, se reorganizó la estructura de carpetas para asegurar coherencia entre módulos, se corrigieron rutas de compilación y se verificó la correcta integración de los distintos componentes del simulador.
+Las correcciones en el desarrollo del sistema incluyeron la reorganización de la estructura de carpetas del proyecto, la corrección de rutas de compilación en GCC, y la integración adecuada de los módulos de memoria, procesos y planificación. También se ajustó la lógica de algunos componentes para asegurar la coherencia del simulador.
 
-En cuanto a Git, se realizó la instalación correcta del sistema, la configuración del PATH, la definición de identidad del usuario, la normalización de la rama principal del repositorio y la sincronización completa con GitHub mediante la resolución de conflictos de historial utilizando rebase.
-
-Estas acciones permitieron estabilizar completamente el entorno de desarrollo y asegurar la correcta integración del proyecto con un sistema de control de versiones funcional.
+En cuanto a Git, se realizó la instalación correcta del sistema, la configuración del PATH en Windows, la definición de la identidad del usuario mediante git config, la corrección de la rama principal del repositorio mediante git branch -M main, y la sincronización del repositorio local con GitHub utilizando git pull origin main --rebase para resolver conflictos de historial. Finalmente, se logró realizar el push exitoso del proyecto completo.
 
 Validaciones realizadas
 
-Una vez aplicadas las correcciones, se realizaron diversas validaciones para confirmar el correcto funcionamiento del sistema. Se verificó la instalación de Git mediante el comando de versión, así como la correcta detección del ejecutable en el sistema operativo. También se validó la conexión con el repositorio remoto mediante la inspección de sus referencias.
+Se realizaron validaciones en distintos niveles del proyecto.
 
-En el proyecto de software, se comprobó la compilación correcta de los módulos principales y la ejecución de scripts de prueba diseñados para evaluar el comportamiento del simulador bajo distintas condiciones.
+En el sistema de control de versiones, se verificó la correcta instalación de Git mediante el comando git --version, así como la correcta detección del ejecutable en el sistema. También se validó la conexión con el repositorio remoto mediante git remote -v y la correcta sincronización del historial de cambios con GitHub.
 
-Finalmente, se confirmó que el repositorio en GitHub contenía la versión completa y actualizada del proyecto, incluyendo código fuente, scripts auxiliares, documentación técnica y la presente bitácora de uso de inteligencia artificial.
+En el sistema desarrollado en C, se validó la correcta compilación de los módulos principales del simulador y la ejecución de pruebas mediante scripts automatizados. Finalmente, se confirmó que el repositorio en GitHub contenía la versión completa y actualizada del proyecto, incluyendo código fuente, documentación y la bitácora de inteligencia artificial.
 
 Conclusión
 
-El uso de inteligencia artificial durante el desarrollo del proyecto permitió resolver problemas técnicos complejos relacionados tanto con la programación en C como con la gestión de control de versiones. Su intervención facilitó la identificación de errores, la comprensión de sus causas y la aplicación de soluciones correctas de manera estructurada.
-
-El resultado final fue un proyecto funcional, correctamente organizado y versionado, que integra conceptos de estructuras de datos, simulación de sistemas operativos y buenas prácticas de desarrollo de software mediante Git y GitHub.
+El uso de inteligencia artificial permitió resolver problemas técnicos complejos relacionados tanto con el desarrollo del sistema en C como con la configuración del control de versiones en Git y GitHub. Su apoyo fue fundamental para identificar errores, comprender sus causas y aplicar soluciones correctas de manera estructurada, logrando la correcta finalización e integración del proyecto.
